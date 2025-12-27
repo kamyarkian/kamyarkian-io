@@ -1,47 +1,27 @@
+// src/components/Hero.tsx
 import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-screen flex flex-col justify-center items-center text-center overflow-hidden bg-black">
-      
-      {/* 1. THE IMAGE (PANAHGAH) - Background Layer */}
-      <div className="absolute inset-0 z-0">
-        <Image 
-          src="/sanctuary.jpg" 
-          alt="Panahgah Sanctuary" 
-          fill 
-          className="object-cover opacity-40" // opacity-40 makes it dark so text pops
-          priority
-        />
-      </div>
+    <section className="relative h-screen w-full overflow-hidden">
+      <Image
+        src="/sanctuary.webp" // <--- updated filename
+        alt="Concrete sanctuary overlooking a sea of data"
+        fill
+        priority
+        className="object-cover"
+      />
 
-      {/* 2. THE CONTENT - Text Layer (z-10 puts it on top of image) */}
-      <div className="relative z-10 px-4 max-w-4xl">
-        
-        {/* Main Title (Assuming you want one, or just the quote) */}
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 tracking-widest uppercase font-serif">
-          System Online
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-[#181c22]/95" />
+
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
+        <h1 className="font-mono text-3xl md:text-5xl tracking-[0.25em] text-gray-100">
+          SYSTEM ONLINE
         </h1>
-
-        <p className="mt-6 text-lg md:text-xl text-cyan-100 font-light leading-relaxed">
-          The Lighthouse Theory: You don't need to chase people to be seen.
-          <br />
-          Stand where you are and shine.
+        <p className="mt-6 max-w-xl font-sans text-sm md:text-base text-gray-300">
+          The Lighthouse Theory: You don't need to chase people to be seen. Stand
+          where you are and shine.
         </p>
-
-        {/* 3. DAILY SIGNAL (STATIC MVP) */}
-        <div className="mt-12 border-l-2 border-amber-500 bg-black/50 p-6 backdrop-blur-md max-w-lg mx-auto rounded-r-lg">
-          <p className="font-mono text-xs text-gray-400 mb-2 tracking-widest">
-            :: DAILY SIGNAL ::
-          </p>
-          <p className="text-white italic text-lg">
-            "Wisdom begins in wonder."
-          </p>
-          <p className="text-amber-400 text-sm mt-2 font-semibold">
-            - Socrates
-          </p>
-        </div>
-
       </div>
     </section>
   );

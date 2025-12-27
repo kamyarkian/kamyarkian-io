@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import "./globals.css"; 
+import "./globals.css";
+import { inter, jetbrainsMono } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Kamyar Kian",
@@ -12,8 +13,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html
+      lang="en"
+      className={`${inter.variable} ${jetbrainsMono.variable}`}
+    >
+      <body className="bg-[#181c22] text-gray-100 antialiased font-sans">
+        {children}
+      </body>
     </html>
   );
 }
