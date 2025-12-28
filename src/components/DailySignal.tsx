@@ -1,7 +1,7 @@
 // src/components/DailySignal.tsx
 "use client";
 
-import { dailySignal } from "../data/signal-data";
+import { dailySignal } from "@/app/data/signal-data";
 
 export default function DailySignal() {
   return (
