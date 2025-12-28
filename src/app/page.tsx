@@ -1,3 +1,4 @@
+// src/app/page.tsx
 import Hero from "../components/Hero";
 import DailySignal from "../components/DailySignal";
 
