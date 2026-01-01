@@ -1,9 +1,1 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* DEBUG: FORCE BLACK BACKGROUND */
-body {
-  background-color: #1A1D23;
-  color: #ffffff;
-}
+@import "tailwindcss";

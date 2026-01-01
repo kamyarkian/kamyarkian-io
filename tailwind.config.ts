@@ -9,14 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        concrete: { DEFAULT: '#34495E', dark: '#2C3E50', darker: '#1A252F' },
-        ocean: { deep: '#1E3A5F', twilight: '#2E5A7D', mist: '#5B8BA8' },
-        amber: { glow: '#FF6B35', warm: '#E8925C' },
-        slate: { foundation: '#1A1D23' }
+        background: "var(--background)",
+        foreground: "var(--foreground)",
       },
       fontFamily: {
-        mono: ['Courier New', 'monospace'], 
-        sans: ['Arial', 'sans-serif'],      
+        sans: ["var(--font-inter)", "sans-serif"],
+        mono: ["var(--font-jetbrains-mono)", "monospace"],
       },
     },
   },
