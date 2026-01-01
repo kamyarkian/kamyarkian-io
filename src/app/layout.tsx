@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { inter, jetbrainsMono } from "./fonts";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Kamyar Kian",
-  description: "Project Lighthouse",
+  title: "Kamyar Kian | Human-Centered Data Science",
+  description: "Personal website of Kamyar Kian. Exploring the intersection of Data, Economics, and Psychology.",
 };
 
 export default function RootLayout({
@@ -13,11 +13,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${jetbrainsMono.variable}`}
-    >
-      <body className="bg-[#181c22] text-gray-100 antialiased font-sans">
+    <html lang="en">
+      <body className="antialiased bg-black text-white selection:bg-amber-500 selection:text-black">
+        {/* Navigation Bar (Appears on all pages) */}
+        <Navbar />
+        
+        {/* Main Page Content */}
         {children}
       </body>
     </html>
