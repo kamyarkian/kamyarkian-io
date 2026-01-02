@@ -1,5 +1,3 @@
-// src/types/index.ts
-
 export interface Project {
   id: string;
   title: string;
@@ -7,6 +5,10 @@ export interface Project {
   tech: string[];
   link: string;
   github?: string;
+  stats?: {
+    label: string;
+    value: string;
+  }[];
 }
 
 export interface Signal {
