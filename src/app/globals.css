@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 @import "tailwindcss";
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+>>>>>>> 0500c07 (feat(branding): add Lighthouse K favicon and layout updates)
