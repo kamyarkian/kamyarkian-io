@@ -1,48 +1,57 @@
-import Link from "next/link";
-import { ExternalLink, Code } from "lucide-react";
+import { Project } from '@/types';
+import { ArrowUpRight, Github } from 'lucide-react';
 
-interface ProjectProps {
-  title: string;
-  description: string;
-  tech: string[];
-  link: string;
-  status: string;
-}
-
-export default function ProjectCard({ title, description, tech, link, status }: ProjectProps) {
+export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <div className="group relative bg-neutral-900 border border-neutral-800 rounded-xl p-6 hover:border-amber-500/50 transition-all duration-300">
+    <div className="group relative p-8 bg-zinc-900/50 border border-zinc-800 rounded-3xl hover:border-zinc-700 transition-all duration-500">
       
-      {/* STATUS BADGE */}
-      <div className="absolute top-4 right-4 text-[10px] font-mono text-neutral-500 border border-neutral-800 px-2 py-1 rounded group-hover:text-amber-500 group-hover:border-amber-500/30 transition-colors">
-        {status}
+      {/* Header: Stats & Link */}
+      <div className="flex justify-between items-start mb-6">
+        <div className="flex gap-2">
+          {project.stats?.map((stat, i) => (
+             <span key={i} className="text-xs font-mono text-zinc-500 bg-zinc-800/50 px-2 py-1 rounded">
+               {stat.label}: {stat.value}
+             </span>
+          ))}
+        </div>
+        <a 
+          href={project.link} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-zinc-500 hover:text-white transition-colors"
+        >
+          <ArrowUpRight size={20} />
+        </a>
       </div>
-
-      <div className="mb-4">
-        <Code className="text-neutral-600 group-hover:text-white transition-colors" size={24} />
-      </div>
-
-      <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
-      <p className="text-neutral-400 text-sm mb-6 leading-relaxed">
-        {description}
+      
+      {/* Title & Description */}
+      <h3 className="text-2xl font-bold mb-3 text-zinc-100">{project.title}</h3>
+      <p className="text-zinc-400 mb-6 leading-relaxed text-sm">
+        {project.description}
       </p>
-
-      {/* TECH STACK */}
-      <div className="flex flex-wrap gap-2 mb-6">
-        {tech.map((t) => (
-          <span key={t} className="text-xs text-neutral-500 bg-neutral-950 px-2 py-1 rounded border border-neutral-900">
+      
+      {/* Tech Stack Tags */}
+      <div className="flex flex-wrap gap-2 mb-8">
+        {project.tech.map((t) => (
+          <span key={t} className="px-3 py-1 text-xs font-medium text-zinc-400 border border-zinc-800 rounded-full bg-zinc-900">
             {t}
           </span>
         ))}
       </div>
 
-      <Link 
-        href={link}
-        target="_blank"
-        className="inline-flex items-center gap-2 text-sm text-white font-medium hover:text-amber-500 transition-colors"
-      >
-        View Source <ExternalLink size={14} />
-      </Link>
+      {/* Footer: Github Link */}
+      <div className="flex items-center gap-4 pt-6 border-t border-zinc-800/50">
+         {project.github && (
+           <a 
+             href={project.github} 
+             target="_blank" 
+             rel="noopener noreferrer"
+             className="flex items-center gap-2 text-xs text-zinc-500 hover:text-white transition-colors font-mono uppercase tracking-wider"
+           >
+             <Github size={14} /> Source Code
+           </a>
+         )}
+      </div>
     </div>
   );
 }
