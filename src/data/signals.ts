@@ -1,26 +1,22 @@
-export const signals = [
+import { Signal } from '../types';
+
+export const signals: Signal[] = [
   {
-    id: 1,
-    title: "The Death of 'Average' in Data Science",
-    excerpt: "Why relying on mean values allows outliers to hijack your narrative, and how depth psychology explains our obsession with normalcy.",
-    date: "2026-01-15",
-    category: "Philosophy",
-    slug: "death-of-average",
+    id: 'agentic-ai-blueprint',
+    title: 'Stop Building Chatbots, Start Building Teammates',
+    description: 'Why "Stateless" RAG fails in crisis scenarios—and a technical blueprint for building Cognitive State using LangGraph. A shift from reactive bots to proactive agentic workflows.',
+    link: 'https://medium.com/@kamyarkian/stop-building-chatbots-start-building-teammates-a-human-centered-blueprint-for-agentic-ai-d7a02a977a7d',
+    date: '2026-01-01',
+    tags: ['Agentic AI', 'LangGraph', 'HCDS', 'System Architecture'],
+    readTime: '6 min read'
   },
   {
-    id: 2,
-    title: "Algorithm Aversion: Trust Issues in AI",
-    excerpt: "Humans forgive humans for making mistakes, but we fire algorithms for a single error. A look into the economics of trust.",
-    date: "2026-02-02",
-    category: "Economics",
-    slug: "algorithm-aversion",
-  },
-  {
-    id: 3,
-    title: "React Server Components: A Mental Model",
-    excerpt: "Moving beyond the hype. How RSCs shift the cognitive load from the client to the server, mirroring centralized nervous systems.",
-    date: "2026-02-20",
-    category: "Technology",
-    slug: "rsc-mental-model",
-  },
+    id: 'economic-empathy-climate',
+    title: 'The Price of Smoke: Why Climate Algorithms Need "Economic Empathy"',
+    description: 'A technical proposal for predicting forest fires using Real-Estate Market signals instead of just thermal sensors. How economic data can act as a leading indicator for environmental disasters.',
+    link: 'https://medium.com/@kamyarkian/the-price-of-smoke-why-climate-algorithms-need-economic-empathy-fed33502fbb9',
+    date: '2025-12-08',
+    tags: ['Climate Tech', 'Predictive Modeling', 'Data Science', 'Algorithmic Ethics'],
+    readTime: '8 min read'
+  }
 ];
