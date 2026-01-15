@@ -1,58 +1,40 @@
-<<<<<<< HEAD
-export default function Hero() {
-  return (
-    <div className="pt-32 pb-20 px-6">
-      <h1 className="text-5xl font-bold">Kamyar Kian</h1>
-    </div>
-=======
-import Image from "next/image";
-import { dailySignal } from "@/app/data/signal-data";
+// src/components/Hero.tsx
+
+import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-screen flex flex-col justify-center items-start text-left overflow-hidden bg-black px-8 md:px-24">
-      
-      {/* 1. BACKGROUND IMAGE */}
-      <div className="absolute inset-0 z-0">
-        <Image 
-          src="/sanctuary.webp" 
-          alt="Panahgah Sanctuary" 
-          fill 
-          className="object-cover opacity-60" 
-          priority
-        />
-        {/* Gradient Overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/20 to-transparent"></div>
-      </div>
-
-      {/* 2. TEXT CONTENT (Aligned Left) */}
-      <div className="relative z-10 max-w-2xl mt-20">
-        
-        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-widest uppercase font-serif">
-          System <br /> Online
-        </h1>
-
-        <div className="h-1 w-24 bg-amber-500 mb-8"></div>
-
-        <p className="text-lg md:text-2xl text-cyan-100 font-light leading-relaxed mb-10 opacity-90">
-          The Lighthouse Theory: <br />
-          You don't need to chase people to be seen.
-          <br />
-          <span className="text-white font-medium">Stand where you are and shine.</span>
+    <section className="pt-32 pb-20 px-6">
+      <div className="mx-auto max-w-5xl text-center">
+        <p className="text-sm font-medium uppercase tracking-[0.2em] text-emerald-300">
+          Human-Centered Data Science · 2026
         </p>
 
-        {/* 3. DAILY SIGNAL (Dynamic from Data) */}
-        <div className="border-l-2 border-amber-500 bg-black/40 p-6 backdrop-blur-sm rounded-r-lg max-w-md">
-          <p className="font-mono text-xs text-amber-300 mb-2 tracking-widest">
-            :: DAILY SIGNAL ::
-          </p>
-          <p className="text-white italic text-lg">
-            "{dailySignal.wisdom}"
-          </p>
-        </div>
+        <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
+          Building agentic, ethical, and market-ready AI systems.
+        </h1>
 
+        <p className="mt-6 text-base text-slate-300 sm:text-lg">
+          Kamyar designs and ships production-grade data products that blend robust Python
+          engineering, cognitive science, and North American market strategy.
+        </p>
+
+        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+          <Link
+            href="#projects"
+            className="inline-flex items-center justify-center rounded-full bg-emerald-500 px-6 py-2.5 text-sm font-semibold text-slate-950 shadow-lg shadow-emerald-500/40 hover:bg-emerald-400 transition-colors"
+          >
+            View flagship projects
+          </Link>
+
+          <Link
+            href="#signals"
+            className="inline-flex items-center justify-center rounded-full border border-slate-600 px-6 py-2.5 text-sm font-semibold text-slate-100 hover:border-emerald-400 hover:text-emerald-300 transition-colors"
+          >
+            Market & policy signals
+          </Link>
+        </div>
       </div>
     </section>
->>>>>>> 0500c07 (feat(branding): add Lighthouse K favicon and layout updates)
   );
 }

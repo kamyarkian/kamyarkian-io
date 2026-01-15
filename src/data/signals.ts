@@ -1,22 +1,48 @@
-import { Signal } from '../types';
+// src/data/signals.ts
+
+import type { Signal } from "../types";
 
 export const signals: Signal[] = [
   {
-    id: 'agentic-ai-blueprint',
-    title: 'Stop Building Chatbots, Start Building Teammates',
-    description: 'Why "Stateless" RAG fails in crisis scenarios—and a technical blueprint for building Cognitive State using LangGraph. A shift from reactive bots to proactive agentic workflows.',
-    link: 'https://medium.com/@kamyarkian/stop-building-chatbots-start-building-teammates-a-human-centered-blueprint-for-agentic-ai-d7a02a977a7d',
-    date: '2026-01-01',
-    tags: ['Agentic AI', 'LangGraph', 'HCDS', 'System Architecture'],
-    readTime: '6 min read'
+    id: "toronto-ai-governance-2026",
+    slug: "toronto-ai-governance-2026",
+    title: "Toronto AI Governance – 2026",
+    description:
+      "Summary of emerging AI governance expectations in Toronto and Ontario that directly shape HCDS product design.",
+    summary:
+      "Key compliance expectations for deploying data-driven AI systems in Toronto.",
+    link: "https://example.com/toronto-ai-governance-2026",
+    date: "2026-01-10",
+    tags: ["policy", "canada", "governance", "ai"],
+    category: "Policy",
+    readTime: "4 min",
   },
   {
-    id: 'economic-empathy-climate',
-    title: 'The Price of Smoke: Why Climate Algorithms Need "Economic Empathy"',
-    description: 'A technical proposal for predicting forest fires using Real-Estate Market signals instead of just thermal sensors. How economic data can act as a leading indicator for environmental disasters.',
-    link: 'https://medium.com/@kamyarkian/the-price-of-smoke-why-climate-algorithms-need-economic-empathy-fed33502fbb9',
-    date: '2025-12-08',
-    tags: ['Climate Tech', 'Predictive Modeling', 'Data Science', 'Algorithmic Ethics'],
-    readTime: '8 min read'
-  }
+    id: "nyc-agentic-workflows-finance",
+    slug: "nyc-agentic-workflows-finance",
+    title: "NYC Agentic Workflows in Finance",
+    description:
+      "How New York trading desks are adopting agentic AI workflows for high-frequency, high-stakes data tasks.",
+    summary:
+      "Signals from NYC funds on where agentic AI is already in production.",
+    link: "https://example.com/nyc-agentic-workflows-finance",
+    date: "2026-01-05",
+    tags: ["agentic-ai", "finance", "nyc", "workflows"],
+    category: "Market",
+    readTime: "3 min",
+  },
+  {
+    id: "ontario-health-data-standards",
+    slug: "ontario-health-data-standards",
+    title: "Ontario Health Data Standards",
+    description:
+      "Evolving standards for privacy-preserving analytics on health data in Ontario, relevant to responsible HCDS tooling.",
+    summary:
+      "Constraints and opportunities for health-focused data products in Ontario.",
+    link: "https://example.com/ontario-health-data-standards",
+    date: "2026-01-02",
+    tags: ["health", "data-privacy", "ontario"],
+    category: "Regulation",
+    readTime: "5 min",
+  },
 ];
