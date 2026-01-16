@@ -1,35 +1,26 @@
 import Link from "next/link";
 
 export default function Navbar() {
-  const navItems = [
-    { name: "ABOUT", href: "/" },
-    { name: "SIGNALS", href: "/signals" },
-    { name: "CONTACT", href: "/contact" },
-  ];
-
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-md bg-black/50 border-b border-white/5">
-      <div className="max-w-7xl mx-auto px-6 md:px-20 py-4 flex justify-between items-center">
+    <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-md">
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         
-        {/* LOGO */}
-        <Link 
-          href="/" 
-          className="text-white font-bold tracking-[0.2em] text-sm md:text-base hover:text-amber-500 transition-colors"
-        >
-          KAMYAR.KIAN
+        {/* LOGO: The Gradient "K" */}
+        <Link href="/" className="group flex items-center gap-2 cursor-pointer">
+          {/* The Alchemy K: Gradient from Amber to Firoozei */}
+          <span className="text-4xl font-serif font-bold bg-clip-text text-transparent bg-gradient-to-tr from-brand to-firoozei drop-shadow-[0_0_15px_rgba(0,212,197,0.4)]">
+            K
+          </span>
+          <span className="text-sm font-light tracking-[0.2em] uppercase opacity-70 group-hover:opacity-100 transition-opacity text-white">
+            amyar.Kian
+          </span>
         </Link>
 
-        {/* DESKTOP MENU */}
-        <div className="flex gap-8">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className="text-xs font-mono text-neutral-400 hover:text-white transition-colors tracking-widest"
-            >
-              {item.name}
-            </Link>
-          ))}
+        {/* NAVIGATION LINKS */}
+        <div className="hidden md:flex gap-8 text-xs font-mono tracking-widest text-gray-400">
+          <Link href="#works" className="hover:text-firoozei transition-colors">WORKS</Link>
+          <Link href="#signals" className="hover:text-firoozei transition-colors">SIGNALS</Link>
+          <Link href="#contact" className="hover:text-firoozei transition-colors">CONTACT</Link>
         </div>
 
       </div>
