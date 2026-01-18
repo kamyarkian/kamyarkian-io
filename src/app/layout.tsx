@@ -1,4 +1,3 @@
-// src/app/layout.tsx
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -22,9 +21,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    // CHANGE 1: Added "scroll-smooth" for gliding effect
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased bg-black text-white selection:bg-amber-500 selection:text-black`}
+        // CHANGE 2: Changed selection color to firoozei to match your brand
+        className={`${inter.variable} ${jetbrainsMono.variable} antialiased bg-black text-white selection:bg-firoozei selection:text-black`}
       >
         {children}
       </body>
