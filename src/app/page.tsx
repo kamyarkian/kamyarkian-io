@@ -25,7 +25,7 @@ const projects = [
   },
 ];
 
-// DATA: Signals (Linked to your Medium Profile for now)
+// DATA: Signals (Linked to your Medium Profile)
 const signals = [
   { 
     slug: "ai-gov", 
@@ -54,7 +54,7 @@ export default function Home() {
   return (
     <main className="min-h-screen pt-24 pb-0 px-6 md:px-12 max-w-7xl mx-auto flex flex-col">
       
-      {/* HERO SECTION (PERFECTLY BALANCED) */}
+      {/* HERO SECTION */}
       <section className="py-24 space-y-8">
         
         {/* Status Badge */}
@@ -73,26 +73,32 @@ export default function Home() {
           Kamyar designs and ships production-grade data products that blend robust Python engineering, cognitive science, and North American market strategy.
         </p>
 
-        {/* Buttons */}
+        {/* Buttons (NOW WIRED TO SECTIONS) */}
         <div className="flex flex-wrap gap-4 pt-6">
-          <button className="px-8 py-4 bg-firoozei text-black font-bold rounded-full hover:bg-white transition-colors shadow-[0_0_20px_rgba(0,212,197,0.3)]">
+          <a 
+            href="#works" 
+            className="px-8 py-4 bg-firoozei text-black font-bold rounded-full hover:bg-white transition-colors shadow-[0_0_20px_rgba(0,212,197,0.3)] cursor-pointer text-center"
+          >
             View Flagship Projects
-          </button>
-          <button className="px-8 py-4 border border-white/20 rounded-full hover:border-brand hover:text-brand transition-colors text-sm font-mono tracking-widest uppercase">
+          </a>
+          <a 
+            href="#signals" 
+            className="px-8 py-4 border border-white/20 rounded-full hover:border-brand hover:text-brand transition-colors text-sm font-mono tracking-widest uppercase cursor-pointer flex items-center justify-center"
+          >
             Market & Policy Signals
-          </button>
+          </a>
         </div>
       </section>
 
-      {/* SELECTED WORKS (LINKED TO REAL PROJECTS) */}
-      <section id="works" className="py-20 border-t border-white/5">
+      {/* SELECTED WORKS */}
+      <section id="works" className="py-20 border-t border-white/5 scroll-mt-20">
         <h3 className="text-xs font-mono text-gray-500 tracking-[0.2em] mb-12 uppercase">Selected Works</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((p, i) => (
             <a 
               key={i} 
               href={p.link}
-              target="_blank" // Opens in new tab
+              target="_blank" 
               className="group block border border-white/10 bg-surface p-8 rounded-2xl hover:border-firoozei/50 transition-all hover:shadow-[0_0_30px_rgba(0,212,197,0.05)] cursor-pointer"
             >
               <div className="flex justify-between items-start mb-6">
@@ -115,8 +121,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* LATEST SIGNALS (LINKED) */}
-      <section id="signals" className="py-20 border-t border-white/5">
+      {/* LATEST SIGNALS */}
+      <section id="signals" className="py-20 border-t border-white/5 scroll-mt-20">
         <div className="flex justify-between items-end mb-12">
           <h3 className="text-xs font-mono text-gray-500 tracking-[0.2em] uppercase">Latest Signals</h3>
           <a href="https://medium.com/@kamyarkian" target="_blank" className="text-xs font-mono text-gray-500 hover:text-firoozei transition border-b border-transparent hover:border-firoozei pb-1">View all →</a>
@@ -141,11 +147,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CONTACT SECTION (REFINED) */}
+      {/* CONTACT SECTION */}
       <section id="contact" className="py-24 border-t border-white/5 bg-gradient-to-b from-transparent to-surface/30">
         <div className="max-w-4xl mx-auto text-center space-y-10">
           
-          {/* Headline */}
           <h2 className="text-2xl md:text-4xl font-mono font-bold tracking-widest uppercase text-brand drop-shadow-[0_0_15px_rgba(245,158,11,0.3)]">
             Ready to Collaborate?
           </h2>
@@ -154,7 +159,6 @@ export default function Home() {
             Connect with me to discuss Data Strategy, AI Governance, or new opportunities.
           </p>
           
-          {/* BUTTON GROUP */}
           <div className="flex flex-wrap justify-center gap-4">
             <a href="https://linkedin.com/in/kamyarkian" target="_blank" className="px-6 py-3 border border-firoozei text-firoozei rounded-full text-sm font-mono tracking-widest hover:bg-firoozei hover:text-black hover:scale-105 transition-all duration-300 shadow-[0_0_10px_rgba(0,212,197,0.1)] hover:shadow-[0_0_20px_rgba(0,212,197,0.4)]">LINKEDIN</a>
             <a href="https://github.com/kamyarkian" target="_blank" className="px-6 py-3 border border-firoozei text-firoozei rounded-full text-sm font-mono tracking-widest hover:bg-firoozei hover:text-black hover:scale-105 transition-all duration-300 shadow-[0_0_10px_rgba(0,212,197,0.1)] hover:shadow-[0_0_20px_rgba(0,212,197,0.4)]">GITHUB</a>
