@@ -23,32 +23,49 @@ const projects = [
 ];
 
 const signals = [
-  { slug: "ai-gov", date: "2026-01-10", title: "Toronto AI Governance – 2026", desc: "Summary of emerging AI governance expectations in Toronto and Ontario." },
-  { slug: "nyc-agentic", date: "2026-01-05", title: "NYC Agentic Workflows in Finance", desc: "How New York trading desks are adopting agentic AI workflows." },
-  { slug: "health-data", date: "2026-01-02", title: "Ontario Health Data Standards", desc: "Evolving standards for privacy-preserving analytics on health data." },
+  { 
+    slug: "ai-gov", 
+    date: "2026-01-10", 
+    title: "Toronto AI Governance – 2026", 
+    desc: "Summary of emerging AI governance expectations in Toronto and Ontario.",
+    link: "https://medium.com/@kamyarkian"
+  },
+  { 
+    slug: "nyc-agentic", 
+    date: "2026-01-05", 
+    title: "NYC Agentic Workflows in Finance", 
+    desc: "How New York trading desks are adopting agentic AI workflows.",
+    link: "https://medium.com/@kamyarkian"
+  },
+  { 
+    slug: "health-data", 
+    date: "2026-01-02", 
+    title: "Ontario Health Data Standards", 
+    desc: "Evolving standards for privacy-preserving analytics on health data.",
+    link: "https://medium.com/@kamyarkian"
+  },
 ];
 
 export default function Home() {
   return (
     <main className="min-h-screen pt-24 pb-0 px-6 md:px-12 max-w-7xl mx-auto flex flex-col">
       
-      {/* HERO SECTION */}
+      {/* HERO SECTION (PERFECTLY BALANCED) */}
       <section className="py-24 space-y-8">
-        {/* Status Badge */}
-        <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-xs font-mono uppercase tracking-widest text-brand">
-          <span className="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
+        
+        {/* Status Badge: Readable and professional */}
+        <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-white/10 bg-white/5 text-sm font-mono uppercase tracking-widest text-brand">
+          <span className="w-3 h-3 rounded-full bg-brand animate-pulse shadow-[0_0_10px_rgba(245,158,11,0.5)]"></span>
           Human-Centered Data Science • 2026
         </div>
         
-        {/* Main Title: Strategic Line Break for Impact */}
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight max-w-6xl leading-[1.15] text-white">
-          Building <span className="text-firoozei">agentic</span>, <span className="text-firoozei">ethical</span>, and
-          <br className="hidden md:block" /> {/* The Power Break */}
-          <span className="text-firoozei">market-ready</span> AI systems.
+        {/* Main Title: Elegant size (text-6xl) for authority without shouting */}
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tight max-w-5xl leading-tight text-white">
+          Building <span className="text-firoozei">agentic</span>, <span className="text-firoozei">ethical</span>, and <span className="text-firoozei">market-ready</span> AI systems.
         </h1>
         
         {/* Description */}
-        <p className="text-lg md:text-xl text-gray-400 max-w-2xl leading-8 font-light">
+        <p className="text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed font-light">
           Kamyar designs and ships production-grade data products that blend robust Python engineering, cognitive science, and North American market strategy.
         </p>
 
@@ -89,32 +106,37 @@ export default function Home() {
         </div>
       </section>
 
-      {/* LATEST SIGNALS */}
+      {/* LATEST SIGNALS (CLICKABLE) */}
       <section id="signals" className="py-20 border-t border-white/5">
         <div className="flex justify-between items-end mb-12">
           <h3 className="text-xs font-mono text-gray-500 tracking-[0.2em] uppercase">Latest Signals</h3>
-          <a href="#" className="text-xs font-mono text-gray-500 hover:text-firoozei transition border-b border-transparent hover:border-firoozei pb-1">View all →</a>
+          <a href="https://medium.com/@kamyarkian" target="_blank" className="text-xs font-mono text-gray-500 hover:text-firoozei transition border-b border-transparent hover:border-firoozei pb-1">View all →</a>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {signals.map((s, i) => (
-            <div key={i} className="border border-white/5 bg-surface/50 p-6 rounded-xl hover:bg-surface transition cursor-pointer group">
+            <a 
+              key={i} 
+              href={s.link} 
+              target="_blank" 
+              className="block border border-white/5 bg-surface/50 p-6 rounded-xl hover:bg-surface transition cursor-pointer group hover:border-firoozei/30"
+            >
               <div className="flex justify-between text-[10px] font-mono text-gray-500 mb-4">
                 <span>{s.date}</span>
-                <span className="text-brand opacity-0 group-hover:opacity-100 transition">READ SIGNAL</span>
+                <span className="text-brand opacity-0 group-hover:opacity-100 transition translate-x-2 group-hover:translate-x-0">READ SIGNAL →</span>
               </div>
               <h4 className="text-lg font-bold mb-2 group-hover:text-firoozei transition">{s.title}</h4>
               <p className="text-xs text-gray-400 leading-relaxed">{s.desc}</p>
-            </div>
+            </a>
           ))}
         </div>
       </section>
 
-      {/* CONTACT SECTION (REFINED SIZE & UNIFIED NEON BUTTONS) */}
+      {/* CONTACT SECTION (REFINED) */}
       <section id="contact" className="py-24 border-t border-white/5 bg-gradient-to-b from-transparent to-surface/30">
         <div className="max-w-4xl mx-auto text-center space-y-10">
           
-          {/* Headline: Perfected Size (text-2xl md:text-4xl) */}
+          {/* Headline: Perfected Size */}
           <h2 className="text-2xl md:text-4xl font-mono font-bold tracking-widest uppercase text-brand drop-shadow-[0_0_15px_rgba(245,158,11,0.3)]">
             Ready to Collaborate?
           </h2>
@@ -123,7 +145,7 @@ export default function Home() {
             Connect with me to discuss Data Strategy, AI Governance, or new opportunities.
           </p>
           
-          {/* UNIFIED BUTTON GROUP */}
+          {/* BUTTON GROUP */}
           <div className="flex flex-wrap justify-center gap-4">
             <a href="https://linkedin.com/in/kamyarkian" target="_blank" className="px-6 py-3 border border-firoozei text-firoozei rounded-full text-sm font-mono tracking-widest hover:bg-firoozei hover:text-black hover:scale-105 transition-all duration-300 shadow-[0_0_10px_rgba(0,212,197,0.1)] hover:shadow-[0_0_20px_rgba(0,212,197,0.4)]">LINKEDIN</a>
             <a href="https://github.com/kamyarkian" target="_blank" className="px-6 py-3 border border-firoozei text-firoozei rounded-full text-sm font-mono tracking-widest hover:bg-firoozei hover:text-black hover:scale-105 transition-all duration-300 shadow-[0_0_10px_rgba(0,212,197,0.1)] hover:shadow-[0_0_20px_rgba(0,212,197,0.4)]">GITHUB</a>
