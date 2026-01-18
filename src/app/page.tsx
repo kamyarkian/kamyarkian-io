@@ -1,27 +1,31 @@
 import Link from "next/link";
 
-// DATA
+// DATA: Projects with REAL Links
 const projects = [
   {
     slug: "toronto-shelter",
     title: "Toronto Shelter Capacity Audit",
     description: "A quantitative analysis of Toronto's shelter system using Python & Open Data. Surfacing critical saturation points across wards.",
-    tags: ["PYTHON", "PANDAS", "MATPLOTLIB", "OPEN DATA API"]
+    tags: ["PYTHON", "PANDAS", "MATPLOTLIB", "OPEN DATA API"],
+    link: "https://github.com/kamyarkian/toronto-shelter-hcds-analysis"
   },
   {
     slug: "cognitive-agent",
-    title: "Cognitive State Agent (LangGraph)",
-    description: "An agentic AI system that maintains cognitive state across steps using LangGraph, designed for human-centered collaboration.",
-    tags: ["LANGGRAPH", "PYTHON", "LLM ENGINEERING"]
+    title: "Agentic AI: Beyond Chatbots",
+    description: "A human-centered blueprint for building AI teammates. Why we need to stop building chatbots and start designing cognitive state agents.",
+    tags: ["LANGGRAPH", "AI STRATEGY", "HUMAN-CENTERED AI"],
+    link: "https://medium.com/@kamyarkian/stop-building-chatbots-start-building-teammates-a-human-centered-blueprint-for-agentic-ai-d7a02a977a7d"
   },
   {
     slug: "wildfire-predictor",
-    title: "Wildfire Economic Predictor",
-    description: "A predictive model that connects climate risk signals with real-estate and market behaviour, exploring economic empathy in algorithms.",
-    tags: ["PYTHON", "SCIKIT-LEARN", "PREDICTIVE MODELING"]
+    title: "The Price of Smoke",
+    description: "Why climate algorithms need economic empathy. A predictive model connecting wildfire risk signals with real-estate market behaviour.",
+    tags: ["PREDICTIVE MODELING", "DATA ETHICS", "ECONOMICS"],
+    link: "https://medium.com/@kamyarkian/the-price-of-smoke-why-climate-algorithms-need-economic-empathy-fed33502fbb9"
   },
 ];
 
+// DATA: Signals (Linked to your Medium Profile for now)
 const signals = [
   { 
     slug: "ai-gov", 
@@ -53,13 +57,13 @@ export default function Home() {
       {/* HERO SECTION (PERFECTLY BALANCED) */}
       <section className="py-24 space-y-8">
         
-        {/* Status Badge: Readable and professional */}
+        {/* Status Badge */}
         <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-white/10 bg-white/5 text-sm font-mono uppercase tracking-widest text-brand">
           <span className="w-3 h-3 rounded-full bg-brand animate-pulse shadow-[0_0_10px_rgba(245,158,11,0.5)]"></span>
           Human-Centered Data Science • 2026
         </div>
         
-        {/* Main Title: Elegant size (text-6xl) for authority without shouting */}
+        {/* Main Title */}
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight max-w-5xl leading-tight text-white">
           Building <span className="text-firoozei">agentic</span>, <span className="text-firoozei">ethical</span>, and <span className="text-firoozei">market-ready</span> AI systems.
         </h1>
@@ -80,17 +84,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SELECTED WORKS */}
+      {/* SELECTED WORKS (LINKED TO REAL PROJECTS) */}
       <section id="works" className="py-20 border-t border-white/5">
         <h3 className="text-xs font-mono text-gray-500 tracking-[0.2em] mb-12 uppercase">Selected Works</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((p, i) => (
-            <div key={i} className="group border border-white/10 bg-surface p-8 rounded-2xl hover:border-firoozei/50 transition-all hover:shadow-[0_0_30px_rgba(0,212,197,0.05)]">
+            <a 
+              key={i} 
+              href={p.link}
+              target="_blank" // Opens in new tab
+              className="group block border border-white/10 bg-surface p-8 rounded-2xl hover:border-firoozei/50 transition-all hover:shadow-[0_0_30px_rgba(0,212,197,0.05)] cursor-pointer"
+            >
               <div className="flex justify-between items-start mb-6">
                 <span className="text-[10px] font-mono text-brand uppercase tracking-widest border border-brand/20 px-2 py-1 rounded">
                   Project {i + 1}
                 </span>
-                <span className="text-gray-600 group-hover:text-firoozei transition">↗</span>
+                <span className="text-gray-600 group-hover:text-firoozei transition transform group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
               </div>
               <h4 className="text-2xl font-bold mb-3 text-white group-hover:text-firoozei transition">{p.title}</h4>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">{p.description}</p>
@@ -101,12 +110,12 @@ export default function Home() {
                   </span>
                 ))}
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>
 
-      {/* LATEST SIGNALS (CLICKABLE) */}
+      {/* LATEST SIGNALS (LINKED) */}
       <section id="signals" className="py-20 border-t border-white/5">
         <div className="flex justify-between items-end mb-12">
           <h3 className="text-xs font-mono text-gray-500 tracking-[0.2em] uppercase">Latest Signals</h3>
@@ -136,7 +145,7 @@ export default function Home() {
       <section id="contact" className="py-24 border-t border-white/5 bg-gradient-to-b from-transparent to-surface/30">
         <div className="max-w-4xl mx-auto text-center space-y-10">
           
-          {/* Headline: Perfected Size */}
+          {/* Headline */}
           <h2 className="text-2xl md:text-4xl font-mono font-bold tracking-widest uppercase text-brand drop-shadow-[0_0_15px_rgba(245,158,11,0.3)]">
             Ready to Collaborate?
           </h2>
