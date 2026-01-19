@@ -1,7 +1,14 @@
 import Link from "next/link";
 
-// DATA: Projects with REAL Links
+// DATA: Projects (Reordered for Maximum Impact: Engineering First)
 const projects = [
+  {
+    slug: "market-pulse",
+    title: "Real-Time Market Pulse",
+    description: "High-throughput financial data pipeline. Ingests via Java Spring Boot, streams through Apache Kafka, and analyzes volatility with Python.",
+    tags: ["JAVA SPRING BOOT", "APACHE KAFKA", "PYTHON", "DOCKER"],
+    link: "https://github.com/KamyarKian/market-pulse"
+  },
   {
     slug: "toronto-shelter",
     title: "Toronto Shelter Capacity Audit",
@@ -73,7 +80,7 @@ export default function Home() {
           Kamyar designs and ships production-grade data products that blend robust Python engineering, cognitive science, and North American market strategy.
         </p>
 
-        {/* Buttons (NOW WIRED TO SECTIONS) */}
+        {/* Buttons (Wired to Sections) */}
         <div className="flex flex-wrap gap-4 pt-6">
           <a 
             href="#works" 
