@@ -1,29 +1,34 @@
-import Link from "next/link";
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
-export default function Navbar() {
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-jetbrains-mono",
+});
+
+export const metadata: Metadata = {
+  title: "Kamyar Kian | Human-Centered Data Systems",
+  description:
+    "Bridging Algorithm Design and Human Psychology. Architecting Agentic AI systems for the 2026 era.",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/5 bg-black/50 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        
-        {/* LOGO: The Gradient "K" */}
-        <Link href="/" className="group flex items-center gap-2 cursor-pointer">
-          {/* The Alchemy K: Gradient from Amber to Firoozei */}
-          <span className="text-4xl font-serif font-bold bg-clip-text text-transparent bg-gradient-to-tr from-brand to-firoozei drop-shadow-[0_0_15px_rgba(0,212,197,0.4)]">
-            K
-          </span>
-          <span className="text-sm font-light tracking-[0.2em] uppercase opacity-70 group-hover:opacity-100 transition-opacity text-white">
-            amyar.Kian
-          </span>
-        </Link>
-
-        {/* NAVIGATION LINKS */}
-        <div className="hidden md:flex gap-8 text-xs font-mono tracking-widest text-gray-400">
-          <Link href="#works" className="hover:text-firoozei transition-colors">WORKS</Link>
-          <Link href="#signals" className="hover:text-firoozei transition-colors">SIGNALS</Link>
-          <Link href="#contact" className="hover:text-firoozei transition-colors">CONTACT</Link>
-        </div>
-
-      </div>
-    </nav>
+    <html lang="en" className="scroll-smooth">
+      <body
+        className={`${inter.variable} ${jetbrainsMono.variable} antialiased bg-black text-white selection:bg-firoozei selection:text-black`}
+      >
+        {children}
+        <Analytics />
+      </body>
+    </html>
   );
 }
