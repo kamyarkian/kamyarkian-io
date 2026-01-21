@@ -2,6 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { JetBrains_Mono } from "next/font/google";
+// NEW: Import Analytics package
+import { Analytics } from "@vercel/analytics/react"; 
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({
@@ -21,13 +23,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    // CHANGE 1: Added "scroll-smooth" for gliding effect
     <html lang="en" className="scroll-smooth">
       <body
-        // CHANGE 2: Changed selection color to firoozei to match your brand
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased bg-black text-white selection:bg-firoozei selection:text-black`}
       >
         {children}
+
+        {/* NEW: Activate Analytics Component here */}
+        <Analytics />
+        
       </body>
     </html>
   );
