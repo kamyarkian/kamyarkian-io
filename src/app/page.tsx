@@ -7,28 +7,28 @@ const projects = [
     title: "Real-Time Market Pulse",
     description: "High-throughput financial data pipeline. Ingests via Java Spring Boot, streams through Apache Kafka, and analyzes volatility with Python.",
     tags: ["JAVA SPRING BOOT", "APACHE KAFKA", "PYTHON", "DOCKER"],
-    link: "https://github.com/KamyarKian/market-pulse"
+    link: "https://github.com/Kian-lavi/market-pulse"
   },
   {
     slug: "toronto-shelter",
     title: "Toronto Shelter Capacity Audit",
     description: "A quantitative analysis of Toronto's shelter system using Python & Open Data. Surfacing critical saturation points across wards.",
     tags: ["PYTHON", "PANDAS", "MATPLOTLIB", "OPEN DATA API"],
-    link: "https://github.com/kamyarkian/toronto-shelter-hcds-analysis"
+    link: "https://github.com/kian-lavi/toronto-shelter-hcds-analysis"
   },
   {
     slug: "cognitive-agent",
     title: "Agentic AI: Beyond Chatbots",
     description: "A human-centered blueprint for building AI teammates. Why we need to stop building chatbots and start designing cognitive state agents.",
     tags: ["LANGGRAPH", "AI STRATEGY", "HUMAN-CENTERED AI"],
-    link: "https://medium.com/@kamyarkian/stop-building-chatbots-start-building-teammates-a-human-centered-blueprint-for-agentic-ai-d7a02a977a7d"
+    link: "https://medium.com/@kian-lavi/stop-building-chatbots-start-building-teammates-a-human-centered-blueprint-for-agentic-ai-d7a02a977a7d"
   },
   {
     slug: "wildfire-predictor",
     title: "The Price of Smoke",
     description: "Why climate algorithms need economic empathy. A predictive model connecting wildfire risk signals with real-estate market behaviour.",
     tags: ["PREDICTIVE MODELING", "DATA ETHICS", "ECONOMICS"],
-    link: "https://medium.com/@kamyarkian/the-price-of-smoke-why-climate-algorithms-need-economic-empathy-fed33502fbb9"
+    link: "https://medium.com/@kian-lavi/the-price-of-smoke-why-climate-algorithms-need-economic-empathy-fed33502fbb9"
   },
 ];
 
@@ -39,21 +39,21 @@ const signals = [
     date: "2026-01-10", 
     title: "Toronto AI Governance – 2026", 
     desc: "Summary of emerging AI governance expectations in Toronto and Ontario.",
-    link: "https://medium.com/@kamyarkian"
+    link: "https://medium.com/@kian-lavi"
   },
   { 
     slug: "nyc-agentic", 
     date: "2026-01-05", 
     title: "NYC Agentic Workflows in Finance", 
     desc: "How New York trading desks are adopting agentic AI workflows.",
-    link: "https://medium.com/@kamyarkian"
+    link: "https://medium.com/@kian-avi"
   },
   { 
     slug: "health-data", 
     date: "2026-01-02", 
     title: "Ontario Health Data Standards", 
     desc: "Evolving standards for privacy-preserving analytics on health data.",
-    link: "https://medium.com/@kamyarkian"
+    link: "https://medium.com/@kian-lavi"
   },
 ];
 
@@ -132,7 +132,7 @@ export default function Home() {
       <section id="signals" className="py-20 border-t border-white/5 scroll-mt-20">
         <div className="flex justify-between items-end mb-12">
           <h3 className="text-xs font-mono text-gray-500 tracking-[0.2em] uppercase">Latest Signals</h3>
-          <a href="https://medium.com/@kamyarkian" target="_blank" className="text-xs font-mono text-gray-500 hover:text-firoozei transition border-b border-transparent hover:border-firoozei pb-1">View all →</a>
+          <a href="https://medium.com/@kian-lavi" target="_blank" className="text-xs font-mono text-gray-500 hover:text-firoozei transition border-b border-transparent hover:border-firoozei pb-1">View all →</a>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -167,10 +167,10 @@ export default function Home() {
           </p>
           
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="https://linkedin.com/in/kamyarkian" target="_blank" className="px-6 py-3 border border-firoozei text-firoozei rounded-full text-sm font-mono tracking-widest hover:bg-firoozei hover:text-black hover:scale-105 transition-all duration-300 shadow-[0_0_10px_rgba(0,212,197,0.1)] hover:shadow-[0_0_20px_rgba(0,212,197,0.4)]">LINKEDIN</a>
-            <a href="https://github.com/kamyarkian" target="_blank" className="px-6 py-3 border border-firoozei text-firoozei rounded-full text-sm font-mono tracking-widest hover:bg-firoozei hover:text-black hover:scale-105 transition-all duration-300 shadow-[0_0_10px_rgba(0,212,197,0.1)] hover:shadow-[0_0_20px_rgba(0,212,197,0.4)]">GITHUB</a>
-            <a href="https://medium.com/@kamyarkian" target="_blank" className="px-6 py-3 border border-firoozei text-firoozei rounded-full text-sm font-mono tracking-widest hover:bg-firoozei hover:text-black hover:scale-105 transition-all duration-300 shadow-[0_0_10px_rgba(0,212,197,0.1)] hover:shadow-[0_0_20px_rgba(0,212,197,0.4)]">MEDIUM</a>
-            <a href="mailto:me@kamyarkian.ca" className="px-6 py-3 border border-firoozei text-firoozei rounded-full text-sm font-mono tracking-widest hover:bg-firoozei hover:text-black hover:scale-105 transition-all duration-300 shadow-[0_0_10px_rgba(0,212,197,0.1)] hover:shadow-[0_0_20px_rgba(0,212,197,0.4)]">EMAIL ME</a>
+            <a href="https://www.linkedin.com/in/kamyar-kian-lavi" target="_blank" className="px-6 py-3 border border-firoozei text-firoozei rounded-full text-sm font-mono tracking-widest hover:bg-firoozei hover:text-black hover:scale-105 transition-all duration-300 shadow-[0_0_10px_rgba(0,212,197,0.1)] hover:shadow-[0_0_20px_rgba(0,212,197,0.4)]">LINKEDIN</a>
+            <a href="https://github.com/kian-lavi" target="_blank" className="px-6 py-3 border border-firoozei text-firoozei rounded-full text-sm font-mono tracking-widest hover:bg-firoozei hover:text-black hover:scale-105 transition-all duration-300 shadow-[0_0_10px_rgba(0,212,197,0.1)] hover:shadow-[0_0_20px_rgba(0,212,197,0.4)]">GITHUB</a>
+            <a href="https://medium.com/@kian-lavi" target="_blank" className="px-6 py-3 border border-firoozei text-firoozei rounded-full text-sm font-mono tracking-widest hover:bg-firoozei hover:text-black hover:scale-105 transition-all duration-300 shadow-[0_0_10px_rgba(0,212,197,0.1)] hover:shadow-[0_0_20px_rgba(0,212,197,0.4)]">MEDIUM</a>
+            <a href="mailto:contact@kian-lavi.com" className="px-6 py-3 border border-firoozei text-firoozei rounded-full text-sm font-mono tracking-widest hover:bg-firoozei hover:text-black hover:scale-105 transition-all duration-300 shadow-[0_0_10px_rgba(0,212,197,0.1)] hover:shadow-[0_0_20px_rgba(0,212,197,0.4)]">EMAIL ME</a>
           </div>
         </div>
       </section>

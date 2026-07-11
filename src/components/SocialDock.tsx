@@ -1,29 +1,30 @@
-import { Github, Linkedin, Mail, FileText } from "lucide-react";
+import { Mail, FileText } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 
 export default function SocialDock() {
   const socialLinks = [
     {
       name: "LinkedIn",
-      href: "https://www.linkedin.com/in/kamyarkian/", // لینک خودت را جایگزین کن
-      icon: <Linkedin size={20} />,
+      href: "https://www.linkedin.com/in/kian-lavi",
+      icon: <FaLinkedin size={20} />,
       color: "hover:text-blue-400 hover:bg-blue-400/10",
     },
     {
       name: "GitHub",
-      href: "https://github.com/kamyarkian", // لینک خودت را جایگزین کن
-      icon: <Github size={20} />,
+      href: "https://github.com/kian-lavi",
+      icon: <FaGithub size={20} />,
       color: "hover:text-purple-400 hover:bg-purple-400/10",
     },
     {
       name: "Email",
-      href: "mailto:contact@kamyarkian.com",
+      href: "mailto:contact@kian-lavi.com",
       icon: <Mail size={20} />,
       color: "hover:text-emerald-400 hover:bg-emerald-400/10",
     },
     {
       name: "Resume",
-      href: "/resume.pdf", // بعداً فایل رزومه را اضافه می‌کنیم
+      href: "/resume.pdf",
       icon: <FileText size={20} />,
       color: "hover:text-amber-400 hover:bg-amber-400/10",
     },

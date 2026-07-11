@@ -19,7 +19,7 @@ export default function ContactPage() {
         </p>
 
         <Link 
-          href="mailto:contact@kamyarkian.com"
+          href="mailto:contact@kian-lavi.com"
           className="inline-flex items-center gap-3 bg-white text-black px-8 py-4 rounded-full font-bold text-lg hover:bg-amber-500 hover:text-black transition-all duration-300 relative z-10"
         >
           <Mail size={20} />

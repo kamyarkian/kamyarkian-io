@@ -12,7 +12,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kamyar Kian | Human-Centered Data Systems",
+  title: "Kamyar Kian-Lavi | Human-Centered Data Systems",
   description:
     "Bridging Algorithm Design and Human Psychology. Architecting Agentic AI systems for the 2026 era.",
 };
