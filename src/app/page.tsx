@@ -178,7 +178,7 @@ export default function Home() {
       {/* FOOTER */}
       <footer className="py-12 border-t border-white/10 text-center">
         <p className="text-xs text-gray-600 font-mono">
-          © 2026 Kamyar Kian. Engineered in Toronto.
+          © 2026 Kamyar Kian-Lavi. Engineered in Toronto.
         </p>
       </footer>
 
